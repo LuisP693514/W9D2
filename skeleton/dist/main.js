@@ -25,7 +25,7 @@ eval("const View = __webpack_require__(/*! ./ttt-view.js */ \"./src/ttt-view.js\
   \*************************/
 /***/ ((module) => {
 
-eval("class View {\n  constructor(game, el) {\n    this.game = game;\n\n    this.el = el;\n    console.log(this.el);\n    // debugger\n    this.setupBoard();\n  }\n\n  setupBoard() {\n    let ul = document.createElement(\"ul\");\n    for (let i = 0; i < 3; i++) {\n      for (let j = 0; j < 3; j++) {\n        \n        const li = document.createElement(\"li\");\n        li.dataset.pos = JSON.stringify([i, j]);\n        ul.appendChild(li);\n        \n      }\n    }\n\n    this.el.append(ul);\n  }\n  \n  bindEvents() {}\n\n  handleClick(e) {}\n\n  makeMove(square) {}\n\n}\n\nmodule.exports = View;\n\n\n//# sourceURL=webpack:///./src/ttt-view.js?");
+eval("class View {\n  constructor(game, el) {\n    this.game = game;\n\n    this.el = el;\n    console.log(this.el);\n    // debugger\n    this.setupBoard();\n  }\n\n  setupBoard() {\n    let ul = document.createElement(\"ul\");\n    for (let i = 0; i < 3; i++) {\n      for (let j = 0; j < 3; j++) {\n        \n        const li = document.createElement(\"li\");\n        li.dataset.pos = JSON.stringify([i, j]);\n        li.style.display = \"flex\";\n        li.style.width = 300;\n        li.style.flexWrap = \"wrap\";\n        \n        if (JSON.parse(li.dataset.pos)[0] === 0){\n\n        }\n        ul.appendChild(li);\n        \n      }\n    }\n\n    this.el.append(ul);\n  }\n  \n  bindEvents() {}\n\n  handleClick(e) {}\n\n  makeMove(square) {}\n\n}\n\nmodule.exports = View;\n\n\n//# sourceURL=webpack:///./src/ttt-view.js?");
 
 /***/ }),
 

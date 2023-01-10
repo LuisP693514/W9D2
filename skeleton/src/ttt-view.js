@@ -15,6 +15,13 @@ class View {
         
         const li = document.createElement("li");
         li.dataset.pos = JSON.stringify([i, j]);
+        li.style.display = "flex";
+        li.style.width = 300;
+        li.style.flexWrap = "wrap";
+        
+        if (JSON.parse(li.dataset.pos)[0] === 0){
+
+        }
         ul.appendChild(li);
         
       }
